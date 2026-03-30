@@ -32,7 +32,7 @@ public class OrderController {
     @GetMapping
     @Cacheable(value = "orders", key = "'all'")
     public Result<List<Order>> findAll() {
-        log.info("从数据库查询所有订单...");
+        log.info("从数据库查询所有订单... - v2.0 CI/CD自动部署测试");
         return Result.success("查询成功", orderService.list());
     }
 
